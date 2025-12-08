@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Porch Pirate Prevention Tips</title>
+
+<style>
+  .pp-tips {
+    --ink:#0F1E3A;
+    --slate:#6B7280;
+    --border:#E4ECF4;
+    --bg-soft:#F9FBFF;
+
+    --accent-900:#0F1E3A;
+    --accent-700:#1E3A5F;
+    --accent-500:#3B82F6;
+    --accent-amber:#FACC15;
+
+    max-width:960px;
+    margin:16px auto;
+    padding:16px;
+    font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,var(--bg-soft),#ffffff);
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow:0 1px 2px rgba(0,0,0,.04),0 10px 24px rgba(15,118,178,.12);
+  }
+
+  .pp-tips-topbar {
+    height:4px;
+    margin:-16px -16px 12px;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+    background:linear-gradient(90deg,
+      transparent,
+      var(--accent-900),
+      var(--accent-700),
+      var(--accent-500),
+      var(--accent-amber),
+      transparent);
+  }
+
+  .pp-tips-eyebrow {
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    font-size:.8rem;
+    font-weight:800;
+    color:var(--slate);
+  }
+
+  .pp-tips-title {
+    margin:.25rem 0 .35rem;
+    font-size:clamp(1.4rem,2.4vw,1.9rem);
+    font-weight:850;
+  }
+
+  .pp-tips-sub {
+    margin:0 0 14px;
+    font-size:13px;
+    color:var(--slate);
+  }
+
+  .pp-tips-grid {
+    display:grid;
+    gap:12px;
+    grid-template-columns:repeat(auto-fit,minmax(clamp(230px,26vw,300px),1fr));
+  }
+
+  .pp-tips-card {
+    display:flex;
+    gap:10px;
+    padding:12px;
+    border:1px solid var(--border);
+    background:#fff;
+    border-radius:14px;
+    transition:.16s ease;
+    align-items:flex-start;
+  }
+
+  .pp-tips-card:hover {
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(15,118,178,.16);
+    border-color:color-mix(in srgb, var(--accent-500) 32%, var(--border));
+  }
+
+  .pp-icon {
+    flex:0 0 34px;
+    width:34px;
+    height:34px;
+    border-radius:999px;
+    background:rgba(15,111,179,.06);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .pp-icon svg {
+    width:22px;
+    height:22px;
+    stroke:var(--accent-700);
+  }
+
+  .pp-tips-text h3 {
+    margin:0 0 2px;
+    font-size:.96rem;
+    font-weight:800;
+  }
+  .pp-tips-text p {
+    margin:0;
+    font-size:.86rem;
+    color:var(--slate);
+  }
+</style>
+</head>
+<body>
+
+<section class="pp-tips" role="region" aria-labelledby="pptitle">
+  <div class="pp-tips-topbar"></div>
+  <div class="pp-tips-eyebrow">Delivery Security</div>
+  <h2 id="pptitle" class="pp-tips-title">Tips for Combating Porch Pirates</h2>
+  <p class="pp-tips-sub">Quick, practical ways to make your doorstep less attractive to package thieves.</p>
+
+  <div class="pp-tips-grid">
+
+    <!-- 1 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <path d="M3 7l9-4 9 4v6c0 5-4 9-9 9s-9-4-9-9V7z"/>
+          <path d="M3 7l9 4 9-4"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Use secure delivery</h3>
+        <p>Lockers and pick-up points beat the porch.</p>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <path d="M4 6h16M4 12h10M4 18h8"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Give clear instructions</h3>
+        <p>Ask drivers to hide parcels out of sight.</p>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <rect x="6" y="3" width="12" height="18" rx="2"/>
+          <circle cx="12" cy="16" r="1.2"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Add a doorbell camera</h3>
+        <p>Cameras deter quick-grab thieves.</p>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <circle cx="12" cy="12" r="8"/>
+          <path d="M12 7v5l3 2"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Schedule delivery</h3>
+        <p>Choose times you’ll be home.</p>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <rect x="7" y="2" width="10" height="20" rx="2"/>
+          <path d="M11 18h2"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Use tracking apps</h3>
+        <p>Grab packages shortly after arrival.</p>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <rect x="4" y="8" width="16" height="12" rx="2"/>
+          <path d="M4 12h16"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Install a parcel box</h3>
+        <p>Lockable drop boxes secure deliveries.</p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <circle cx="9" cy="10" r="3"/>
+          <circle cx="17" cy="11" r="2.5"/>
+          <path d="M4 20c0-2.3 3-4 5-4s5 1.7 5 4"/>
+          <path d="M13.5 20c0-1.6 1.7-2.9 3.5-2.9s3.5 1.3 3.5 2.9"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Ask a neighbor</h3>
+        <p>They can collect packages when you’re out.</p>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="pp-tips-card">
+      <div class="pp-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.8">
+          <path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/>
+          <path d="M3 7l9 4 9-4"/>
+        </svg>
+      </div>
+      <div class="pp-tips-text">
+        <h3>Hold at facility</h3>
+        <p>Pick up from USPS, UPS, FedEx, or Amazon.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</body>
+</html>
