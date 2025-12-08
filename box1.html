@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+  :root{
+    --accent-900:#165534;   /* deep evergreen */
+    --accent-700:#B2262F;   /* muted berry red */
+    --accent-500:#E34A4A;   /* soft red accent */
+    --accent-amber:#FACC15; /* warm gold */
+    --border:#E4ECF4;
+    --bg-soft:#F9FAFB;
+  }
+
+  body{
+    margin:0;
+    background:#F9FAFB;
+    display:flex;
+    justify-content:center;
+    padding:28px 12px;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
+
+  /* Styled image container */
+  .styled-image{
+    position:relative;
+    border-radius:20px;
+    padding:3px;
+    width:100%;
+    max-width:860px;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--accent-900) 0%,
+        var(--accent-700) 40%,
+        var(--accent-500) 100%
+      );
+      
+    box-shadow:
+      0 8px 22px rgba(0,0,0,.18),
+      0 2px 6px rgba(0,0,0,.08);
+      
+    overflow:hidden;
+  }
+
+  .styled-image-inner{
+    border-radius:17px;
+    overflow:hidden;
+    background:#000;
+  }
+
+  .styled-image-inner img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:cover;
+    filter:saturate(1.05) brightness(1.02);
+  }
+</style>
+
+</head>
+<body>
+
+<div class="styled-image">
+  <div class="styled-image-inner">
+    <img
+      src="https://images.pexels.com/photos/19643875/pexels-photo-19643875.jpeg"
+      alt=""
+      loading="lazy"
+    >
+  </div>
+</div>
+
+</body>
+</html>
