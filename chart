@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Top 10 U.S. States Most at Risk from Porch Pirates</title>
+</head>
+
+<body style="margin:0;">
+
+<section class="csb-porchpirate-embed" role="region" aria-labelledby="csb-porchpirate-title"
+  style="max-width:860px;margin:16px auto;font:14px/1.35 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+         color:#101827;background:#ffffff;border:1px solid #E4ECF4;border-radius:12px;
+         box-shadow:0 1px 2px rgba(0,0,0,.04),0 6px 18px rgba(15,118,178,.15);">
+
+  <style>
+    /* ==== Scoped styles for the Porch Pirate table ========================= */
+    section.csb-porchpirate-embed,
+    section.csb-porchpirate-embed * {
+      box-sizing: border-box;
+      font-family: inherit;
+      color: inherit;
+    }
+    section.csb-porchpirate-embed { color-scheme: light; }
+
+   .csb-porchpirate-embed {
+  --ink:#0F1E3A;
+  --slate:#6B7280;
+  --border:#E4ECF4;
+  --bg-soft:#F9FBFF;
+
+  --accent-900:#0F1E3A; /* midnight blue */
+  --accent-700:#1E3A5F; /* deep frost blue */
+  --accent-500:#3B82F6; /* bright ice blue */
+  --accent-amber:#FACC15; /* warm gold */
+}
+    .csb-porchpirate-embed .head{
+      padding:14px 16px;
+      border-bottom:1px solid var(--border)!important;
+      color:#fff!important;
+      background:
+        radial-gradient(140% 160% at 90% 0%, rgba(255,255,255,.2) 0%, transparent 55%),
+        linear-gradient(115deg,var(--accent-900) 0%,var(--accent-700) 40%,var(--accent-500) 100%)!important;
+      position:relative;
+      overflow:hidden;
+    }
+    .csb-porchpirate-embed .head::after{
+      content:"📦";
+      position:absolute;
+      right:18px;
+      top:10px;
+      font-size:24px;
+      opacity:.9;
+      text-shadow:0 0 10px rgba(0,0,0,.25);
+    }
+    .csb-porchpirate-embed .title{
+      margin:0 0 4px;
+      font-size:clamp(16px,2.2vw,20px);
+      line-height:1.2;
+      font-weight:800;
+      letter-spacing:0.02em;
+      color:#fff!important;
+    }
+    .csb-porchpirate-embed .sub{
+      margin:0;
+      color:rgba(255,255,255,.92)!important;
+      font-size:12px;
+    }
+    .csb-porchpirate-embed .meta{
+      margin:4px 0 0;
+      color:rgba(255,255,255,.85)!important;
+      font-size:12px;
+    }
+
+    .csb-porchpirate-embed .table{
+      padding:10px 12px;
+      max-height:min(72vh,640px);
+      overflow:auto;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-gutter:stable;
+      background:#fff;
+    }
+    .csb-porchpirate-embed .table::-webkit-scrollbar{ width:8px; height:8px }
+    .csb-porchpirate-embed .table::-webkit-scrollbar-track{ background:var(--bg-soft); border-radius:999px }
+    .csb-porchpirate-embed .table::-webkit-scrollbar-thumb{
+      background:linear-gradient(180deg,var(--accent-700),var(--accent-500));
+      border-radius:999px;border:2px solid #fff;
+    }
+
+    .csb-porchpirate-embed .row{
+      display:grid;
+      grid-template-columns:40px minmax(0,1.2fr) minmax(0,1fr);
+      gap:8px;
+      align-items:center;
+      margin:6px 0;
+      border:1px solid var(--border)!important;
+      border-radius:12px;
+      padding:8px 10px;
+      background:#fff!important;
+      transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background-color .16s ease;
+      transform-origin:center;
+    }
+    .csb-porchpirate-embed .row:hover{
+      background:linear-gradient(0deg,rgba(15,111,179,.05),rgba(15,111,179,.05)),#fff!important;
+      border-color:#CFE3FF!important;
+      box-shadow:0 8px 20px rgba(15,111,179,.16);
+      transform:translateY(-1px);
+    }
+
+    @media (max-width:640px){
+      .csb-porchpirate-embed .row{
+        grid-template-columns:32px minmax(0,1fr);
+      }
+      .csb-porchpirate-embed .metric{
+        grid-column:1 / -1;
+      }
+    }
+
+    .csb-porchpirate-embed .rank{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-variant-numeric:tabular-nums;
+      color:var(--slate);
+    }
+    .csb-porchpirate-embed .rank span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:26px;height:26px;
+      border-radius:999px;
+      background:var(--bg-soft);
+      border:1px solid var(--border);
+    }
+    .csb-porchpirate-embed .row[data-rank="1"] .rank span{
+      background:radial-gradient(circle at 30% 25%,#fff 0%,#FDE68A 40%,#FBBF24 100%);
+      border-color:#D97706;
+      color:#78350F;
+    }
+
+    .csb-porchpirate-embed .state{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .csb-porchpirate-embed .state-main{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+      color:var(--ink);
+    }
+    .csb-porchpirate-embed .state-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+      padding:2px 7px;
+      border-radius:999px;
+      font-size:11px;
+      background:rgba(15,111,179,.06);
+      color:var(--accent-900);
+    }
+    .csb-porchpirate-embed .state-pill::before{
+      content:"🔒";
+      font-size:11px;
+    }
+    .csb-porchpirate-embed .state-city{
+      font-size:11px;
+      color:var(--slate);
+    }
+
+    .csb-porchpirate-embed .metric{
+      position:relative;
+      height:30px;
+      border-radius:999px;
+      background:rgba(15,111,179,.04)!important;
+      overflow:hidden;
+      padding-right:120px;
+    }
+    .csb-porchpirate-embed .bar{
+      position:absolute;
+      inset:0 auto 0 0;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--accent-900),var(--accent-500))!important;
+      box-shadow:inset 0 0 0 1px rgba(0,0,0,.03);
+    }
+    .csb-porchpirate-embed .metric-inner{
+      position:absolute;
+      inset:0 8px 0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:6px;
+      font-variant-numeric:tabular-nums;
+      font-size:12px;
+    }
+    .csb-porchpirate-embed .chip{
+      padding:3px 8px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid #E5E7EB;
+      white-space:nowrap;
+    }
+    .csb-porchpirate-embed .chip.prob{
+      font-weight:700;
+      color:var(--accent-900);
+    }
+    .csb-porchpirate-embed .chip.odds{
+      color:var(--slate);
+      font-size:11px;
+    }
+
+    /* Footer + embed button */
+    .csb-porchpirate-embed .csb-footer{
+      display:block!important;
+      text-align:center;
+      padding:6px 0;
+      border-top:1px solid var(--border);
+      background:
+        radial-gradient(160% 180% at 90% 0%, rgba(255,255,255,.16) 0%, transparent 55%),
+        linear-gradient(115deg,var(--accent-900) 0%,var(--accent-700) 50%,var(--accent-500) 100%)!important;
+      color:#fff;
+      position:relative;
+      overflow:visible;
+    }
+    .csb-porchpirate-embed .footer-inner{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      position:relative;
+      padding:0 10px;
+    }
+    .csb-porchpirate-embed .embed-btn{
+      position:absolute;
+      left:14px;
+      background:#FBBF24;
+      color:#3B1F00;
+      border:1px solid #D97706;
+      border-radius:8px;
+      padding:6px 14px;
+      font:13px/1.2 system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+      cursor:pointer;
+      transition:.2s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+    }
+    .csb-porchpirate-embed .embed-btn::before{
+      content:"</>";
+      font-size:12px;
+    }
+    .csb-porchpirate-embed .embed-btn:hover{
+      background:#FACC15;
+      border-color:#B45309;
+    }
+    .csb-porchpirate-embed .csb-footer img{
+      height:46px;
+      width:auto;
+      display:inline-block;
+      filter:drop-shadow(0 0 4px rgba(0,0,0,.35));
+    }
+
+    .csb-porchpirate-embed .embed-wrapper{
+      position:absolute;
+      bottom:calc(100% + 10px);
+      left:50%;
+      transform:translateX(-50%);
+      width:min(600px, calc(100% - 24px));
+      display:none;
+      padding:16px 20px;
+      border:1px solid #D1D5DB;
+      border-radius:12px;
+      background:#fff;
+      color:#111;
+      box-shadow:0 12px 28px rgba(0,0,0,.18);
+      z-index:1000;
+    }
+    .csb-porchpirate-embed .embed-wrapper::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:-8px;
+      border:8px solid transparent;
+      border-top-color:#fff;
+      filter:drop-shadow(0 1px 1px rgba(0,0,0,.08));
+    }
+    .csb-porchpirate-embed .embed-wrapper textarea{
+      width:100%;
+      height:140px;
+      font:13px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+      color:#111;
+      background:#F9FAFB;
+      padding:10px 12px;
+      border:1px solid #D1D5DB;
+      border-radius:8px;
+      resize:none;
+    }
+    .csb-porchpirate-embed #copy-status{
+      display:none;
+      color:#047857;
+      font-size:13px;
+      margin-top:6px;
+    }
+
+    @media (max-width:640px){
+      .csb-porchpirate-embed .embed-btn{
+        position:static;
+        font-size:12px;
+        padding:6px 10px;
+      }
+      .csb-porchpirate-embed .footer-inner{
+        justify-content:space-between;
+      }
+      .csb-porchpirate-embed .csb-footer img{
+        height:40px;
+      }
+      .csb-porchpirate-embed .embed-wrapper{
+        width:calc(100% - 24px);
+      }
+    }
+  </style>
+
+  <div class="head">
+    <h3 id="csb-porchpirate-title" class="title">Top 10 U.S. States Most at Risk from Porch Pirates</h3>
+    <p class="sub"><em>Ranked by a Porch Pirate Index combining stolen-package reports, porch-pirate search activity, and home larceny data.</em></p>
+    <p class="meta">Scores converted into implied probability and American-style odds for an odds-based look at package theft risk.</p>
+  </div>
+
+  <div class="table">
+    <!-- 1. Kentucky -->
+    <div class="row" data-rank="1">
+      <div class="rank"><span>1</span></div>
+      <div class="state">
+        <div class="state-main">
+          Kentucky
+          <span class="state-pill">Highest recent theft reporting</span>
+        </div>
+        <div class="state-city">12% of residents reported a stolen package in the last 3 months.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:100%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">52.5% risk</span>
+          <span class="chip odds">Odds: -111</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. North Dakota -->
+    <div class="row" data-rank="2">
+      <div class="rank"><span>2</span></div>
+      <div class="state">
+        <div class="state-main">
+          North Dakota
+          <span class="state-pill">High share of theft victims</span>
+        </div>
+        <div class="state-city">11% of residents reported a stolen package in the last 3 months.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:88.95%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">46.7% risk</span>
+          <span class="chip odds">Odds: +114</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Texas -->
+    <div class="row" data-rank="3">
+      <div class="rank"><span>3</span></div>
+      <div class="state">
+        <div class="state-main">
+          Texas
+          <span class="state-pill">Highest home theft incidents</span>
+        </div>
+        <div class="state-city">26,293 larceny-theft incidents at residences (2023–24).</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:88.0%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">46.2% risk</span>
+          <span class="chip odds">Odds: +116</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Iowa -->
+    <div class="row" data-rank="4">
+      <div class="rank"><span>4</span></div>
+      <div class="state">
+        <div class="state-main">
+          Iowa
+          <span class="state-pill">Strong theft reporting</span>
+        </div>
+        <div class="state-city">10% of residents reported a stolen package in the last 3 months.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:82.1%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">43.1% risk</span>
+          <span class="chip odds">Odds: +132</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Nebraska -->
+    <div class="row" data-rank="5">
+      <div class="rank"><span>5</span></div>
+      <div class="state">
+        <div class="state-main">
+          Nebraska
+          <span class="state-pill">Same risk score as Iowa</span>
+        </div>
+        <div class="state-city">10% of residents reported a stolen package; 1,644 home thefts.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:82.1%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">43.1% risk</span>
+          <span class="chip odds">Odds: +132</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Alaska -->
+    <div class="row" data-rank="6">
+      <div class="rank"><span>6</span></div>
+      <div class="state">
+        <div class="state-main">
+          Alaska
+          <span class="state-pill">High risk in a small state</span>
+        </div>
+        <div class="state-city">10% of residents reported a stolen package despite fewer total incidents.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:79.81%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">41.9% risk</span>
+          <span class="chip odds">Odds: +139</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Florida -->
+    <div class="row" data-rank="7">
+      <div class="rank"><span>7</span></div>
+      <div class="state">
+        <div class="state-main">
+          Florida
+          <span class="state-pill">Very high search interest</span>
+        </div>
+        <div class="state-city">302 porch-pirate–related Google searches per 100,000 residents.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:77.71%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">40.8% risk</span>
+          <span class="chip odds">Odds: +145</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. California -->
+    <div class="row" data-rank="8">
+      <div class="rank"><span>8</span></div>
+      <div class="state">
+        <div class="state-main">
+          California
+          <span class="state-pill">Large volume of incidents</span>
+        </div>
+        <div class="state-city">15,311 larceny-theft incidents at residences (2023–24).</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:73.33%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">38.5% risk</span>
+          <span class="chip odds">Odds: +160</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Vermont -->
+    <div class="row" data-rank="9">
+      <div class="rank"><span>9</span></div>
+      <div class="state">
+        <div class="state-main">
+          Vermont
+          <span class="state-pill">High victim share</span>
+        </div>
+        <div class="state-city">9% of residents reported a stolen package in the last 3 months.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:70.29%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">36.9% risk</span>
+          <span class="chip odds">Odds: +171</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Virginia -->
+    <div class="row" data-rank="10">
+      <div class="rank"><span>10</span></div>
+      <div class="state">
+        <div class="state-main">
+          Virginia
+          <span class="state-pill">Elevated but mid-table risk</span>
+        </div>
+        <div class="state-city">6% of residents reported a stolen package; 3,817 home thefts.</div>
+      </div>
+      <div class="metric">
+        <span class="bar" style="width:67.43%;"></span>
+        <div class="metric-inner">
+          <span class="chip prob">35.4% risk</span>
+          <span class="chip odds">Odds: +182</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="csb-footer">
+    <div class="footer-inner">
+      <button id="copy-embed-btn" class="embed-btn" aria-controls="embed-wrapper" aria-expanded="false">
+        Embed this chart
+      </button>
+      <img src="https://via.placeholder.com/160x40?text=The+Action+Network"
+           alt="The Action Network"
+           width="160" height="40" loading="lazy" decoding="async" />
+    </div>
+
+    <div id="embed-wrapper" class="embed-wrapper">
+      <textarea id="embed-code" readonly>&lt;iframe
+  src="https://example.com/porch-pirates-index.html"
+  title="Top 10 U.S. States Most at Risk from Porch Pirates"
+  width="100%" height="620"
+  scrolling="no"
+  style="border:0;" loading="lazy"&gt;&lt;/iframe&gt;</textarea>
+      <p id="copy-status">Embed code copied!</p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const btn     = document.getElementById('copy-embed-btn');
+      const wrapper = document.getElementById('embed-wrapper');
+      const ta      = document.getElementById('embed-code');
+      const status  = document.getElementById('copy-status');
+
+      if (btn && wrapper && ta && status) {
+        btn.addEventListener('click', () => {
+          const isHidden = (wrapper.style.display === '' || wrapper.style.display === 'none');
+          wrapper.style.display = isHidden ? 'block' : 'none';
+          btn.setAttribute('aria-expanded', String(isHidden));
+          btn.textContent = isHidden ? 'Hide embed code' : 'Embed this chart';
+
+          if (isHidden) {
+            ta.focus();
+            ta.select();
+            try {
+              document.execCommand('copy');
+              status.style.display = 'block';
+              setTimeout(() => { status.style.display = 'none'; }, 2300);
+            } catch (e) {}
+          }
+        });
+
+        document.addEventListener('click', (e)=>{
+          const open = wrapper.style.display === 'block';
+          if (!open) return;
+          if (!wrapper.contains(e.target) && !btn.contains(e.target)) {
+            wrapper.style.display = 'none';
+            btn.setAttribute('aria-expanded','false');
+            btn.textContent = 'Embed this chart';
+          }
+        });
+
+        document.addEventListener('keydown', (e)=>{
+          if (e.key === 'Escape' && wrapper.style.display === 'block') {
+            wrapper.style.display = 'none';
+            btn.setAttribute('aria-expanded','false');
+            btn.textContent = 'Embed this chart';
+            btn.focus();
+          }
+        });
+      }
+    })();
+  </script>
+</section>
+
+</body>
+</html>
