@@ -1,0 +1,303 @@
+<h2>Full Porch Pirate Index 2025 Dataset</h2>
+<p>Explore the complete rankings for all 50 U.S. states. Use the search box to filter by state and click any column header to sort.</p>
+
+<div id="porch-pirate-dataset">
+  <div class="ppi-controls">
+    <label for="ppi-search"><strong>Search states:</strong></label>
+    <input id="ppi-search" type="search" placeholder="Type a state name…" />
+  </div>
+
+  <div class="ppi-table-wrapper">
+    <table id="ppi-table">
+      <thead>
+        <tr>
+          <th data-sort="rank">Rank</th>
+          <th data-sort="state">State</th>
+          <th data-sort="probability">Implied Probability<br><span>Porch-pirate theft (%)</span></th>
+          <th data-sort="searchPer100k">Searches per 100K<br><span>Porch-pirate terms</span></th>
+          <th data-sort="reportPct">% Reporting Theft<br><span>Last 3 months</span></th>
+          <th data-sort="larceny">Home Larceny-Theft<br><span>Incidents (2023–24)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filled by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  #porch-pirate-dataset {
+    margin-top: 24px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  #porch-pirate-dataset .ppi-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  #ppi-search {
+    max-width: 260px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #CBD5E1;
+    font-size: 14px;
+  }
+
+  #ppi-search:focus {
+    outline: 2px solid #3B82F6;
+    outline-offset: 1px;
+    border-color: #3B82F6;
+  }
+
+  .ppi-table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  }
+
+  #ppi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 740px;
+  }
+
+  #ppi-table thead {
+    background: linear-gradient(115deg, #0F172A 0%, #1E293B 60%, #3B82F6 100%);
+    color: #F9FAFB;
+  }
+
+  #ppi-table th,
+  #ppi-table td {
+    padding: 8px 10px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  #ppi-table th {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    user-select: none;
+  }
+
+  #ppi-table th span {
+    font-size: 11px;
+    opacity: 0.85;
+  }
+
+  #ppi-table th::after {
+    content: "↕";
+    font-size: 10px;
+    opacity: 0.7;
+    margin-left: 4px;
+  }
+
+  #ppi-table th.sorted-asc::after {
+    content: "▲";
+  }
+
+  #ppi-table th.sorted-desc::after {
+    content: "▼";
+  }
+
+  #ppi-table tbody tr:nth-child(even) {
+    background-color: #F8FAFC;
+  }
+
+  #ppi-table tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+  }
+
+  #ppi-table tbody tr:hover {
+    background-color: #EFF6FF;
+  }
+
+  /* Numeric alignment */
+  #ppi-table td:nth-child(1),
+  #ppi-table td:nth-child(3),
+  #ppi-table td:nth-child(4),
+  #ppi-table td:nth-child(5),
+  #ppi-table td:nth-child(6) {
+    font-variant-numeric: tabular-nums;
+  }
+
+  #ppi-table td:nth-child(1) {
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    #ppi-table {
+      font-size: 12px;
+      min-width: 600px;
+    }
+
+    #ppi-table th,
+    #ppi-table td {
+      padding: 6px 8px;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const data = [
+      { rank: 1,  state: "Kentucky",       searchPer100k: 8,  reportPct: 12, larceny: 1983,  probability: 29.8 },
+      { rank: 2,  state: "California",     searchPer100k: 16, reportPct: 6,  larceny: 15311, probability: 27.6 },
+      { rank: 3,  state: "Alaska",         searchPer100k: 12, reportPct: 10, larceny: 89,    probability: 26.7 },
+      { rank: 4,  state: "North Dakota",   searchPer100k: 8,  reportPct: 11, larceny: 695,   probability: 26.6 },
+      { rank: 5,  state: "Texas",          searchPer100k: 9,  reportPct: 5,  larceny: 26293, probability: 25.8 },
+      { rank: 6,  state: "Nebraska",       searchPer100k: 9,  reportPct: 10, larceny: 1644,  probability: 25.4 },
+      { rank: 7,  state: "Iowa",           searchPer100k: 7,  reportPct: 10, larceny: 1807,  probability: 24.0 },
+      { rank: 8,  state: "Vermont",        searchPer100k: 11, reportPct: 9,  larceny: 484,   probability: 23.7 },
+      { rank: 9,  state: "Washington",     searchPer100k: 24, reportPct: 4,  larceny: 4214,  probability: 22.6 },
+      { rank: 10, state: "Oregon",         searchPer100k: 25, reportPct: 3,  larceny: 2994,  probability: 20.2 },
+      { rank: 11, state: "Nevada",         searchPer100k: 11, reportPct: 7,  larceny: 1495,  probability: 19.3 },
+      { rank: 12, state: "New York",       searchPer100k: 12, reportPct: 6,  larceny: 3866,  probability: 18.7 },
+      { rank: 13, state: "Hawaii",         searchPer100k: 12, reportPct: 6,  larceny: 50,    probability: 16.8 },
+      { rank: 14, state: "West Virginia",  searchPer100k: 8,  reportPct: 7,  larceny: 656,   probability: 16.7 },
+      { rank: 15, state: "Pennsylvania",   searchPer100k: 10, reportPct: 5,  larceny: 6112,  probability: 16.0 },
+      { rank: 16, state: "Virginia",       searchPer100k: 8,  reportPct: 6,  larceny: 3817,  probability: 15.8 },
+      { rank: 17, state: "Illinois",       searchPer100k: 11, reportPct: 4,  larceny: 7739,  probability: 15.1 },
+      { rank: 18, state: "Delaware",       searchPer100k: 9,  reportPct: 6,  larceny: 0,     probability: 14.6 },
+      { rank: 19, state: "Kansas",         searchPer100k: 9,  reportPct: 5,  larceny: 2116,  probability: 13.2 },
+      { rank: 20, state: "North Carolina", searchPer100k: 10, reportPct: 3,  larceny: 10116, probability: 13.1 },
+      { rank: 21, state: "Colorado",       searchPer100k: 13, reportPct: 3,  larceny: 5719,  probability: 13.0 },
+      { rank: 22, state: "New Mexico",     searchPer100k: 12, reportPct: 4,  larceny: 1698,  probability: 12.7 },
+      { rank: 23, state: "Arizona",        searchPer100k: 11, reportPct: 4,  larceny: 2733,  probability: 12.5 },
+      { rank: 24, state: "Rhode Island",   searchPer100k: 9,  reportPct: 5,  larceny: 324,   probability: 12.3 },
+      { rank: 25, state: "Maryland",       searchPer100k: 10, reportPct: 4,  larceny: 3180,  probability: 12.0 },
+      { rank: 26, state: "Florida",        searchPer100k: 10, reportPct: 3,  larceny: 7028,  probability: 11.5 },
+      { rank: 27, state: "Wyoming",        searchPer100k: 10, reportPct: 4,  larceny: 167,   probability: 10.4 },
+      { rank: 28, state: "Minnesota",      searchPer100k: 10, reportPct: 3,  larceny: 4905,  probability: 10.4 },
+      { rank: 29, state: "Louisiana",      searchPer100k: 8,  reportPct: 4,  larceny: 2661,  probability: 10.3 },
+      { rank: 30, state: "Montana",        searchPer100k: 9,  reportPct: 4,  larceny: 888,   probability: 10.1 },
+      { rank: 31, state: "Massachusetts",  searchPer100k: 11, reportPct: 3,  larceny: 2506,  probability: 9.9 },
+      { rank: 32, state: "South Carolina", searchPer100k: 9,  reportPct: 3,  larceny: 4456,  probability: 9.4 },
+      { rank: 33, state: "New Hampshire",  searchPer100k: 8,  reportPct: 4,  larceny: 369,   probability: 9.1 },
+      { rank: 34, state: "Arkansas",       searchPer100k: 7,  reportPct: 4,  larceny: 1520,  probability: 9.0 },
+      { rank: 35, state: "Maine",          searchPer100k: 8,  reportPct: 4,  larceny: 174,   probability: 9.0 },
+      { rank: 36, state: "Wisconsin",      searchPer100k: 7,  reportPct: 4,  larceny: 1545,  probability: 9.0 },
+      { rank: 37, state: "Tennessee",      searchPer100k: 9,  reportPct: 2,  larceny: 7119,  probability: 8.3 },
+      { rank: 38, state: "Mississippi",    searchPer100k: 6,  reportPct: 4,  larceny: 1578,  probability: 8.3 },
+      { rank: 39, state: "Alabama",        searchPer100k: 7,  reportPct: 3,  larceny: 4338,  probability: 7.9 },
+      { rank: 40, state: "Missouri",       searchPer100k: 8,  reportPct: 3,  larceny: 2768,  probability: 7.8 },
+      { rank: 41, state: "South Dakota",   searchPer100k: 9,  reportPct: 3,  larceny: 486,   probability: 7.4 },
+      { rank: 42, state: "Ohio",           searchPer100k: 7,  reportPct: 2,  larceny: 7238,  probability: 7.0 },
+      { rank: 43, state: "Oklahoma",       searchPer100k: 9,  reportPct: 2,  larceny: 4139,  probability: 6.8 },
+      { rank: 44, state: "New Jersey",     searchPer100k: 9,  reportPct: 2,  larceny: 3830,  probability: 6.6 },
+      { rank: 45, state: "Georgia",        searchPer100k: 10, reportPct: 2,  larceny: 2324,  probability: 6.6 },
+      { rank: 46, state: "Idaho",          searchPer100k: 8,  reportPct: 3,  larceny: 323,   probability: 6.6 },
+      { rank: 47, state: "Indiana",        searchPer100k: 7,  reportPct: 3,  larceny: 1289,  probability: 6.4 },
+      { rank: 48, state: "Michigan",       searchPer100k: 8,  reportPct: 1,  larceny: 6684,  probability: 4.9 },
+      { rank: 49, state: "Connecticut",    searchPer100k: 10, reportPct: 1,  larceny: 1457,  probability: 3.6 },
+      { rank: 50, state: "Utah",           searchPer100k: 9,  reportPct: 1,  larceny: 1668,  probability: 3.0 }
+    ];
+
+    const tbody = document.querySelector("#ppi-table tbody");
+    const searchInput = document.getElementById("ppi-search");
+    const headers = document.querySelectorAll("#ppi-table th[data-sort]");
+
+    let currentSort = { key: "rank", direction: "asc" };
+    let filteredData = [...data];
+
+    function renderRows(rows) {
+      tbody.innerHTML = "";
+      rows.forEach(row => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${row.rank}</td>
+          <td>${row.state}</td>
+          <td>${row.probability.toFixed(1).replace(".0", "")}%</td>
+          <td>${row.searchPer100k}</td>
+          <td>${row.reportPct.toFixed(1).replace(".0", "")}%</td>
+          <td>${row.larceny.toLocaleString()}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function sortData(key) {
+      const isNumeric = ["rank", "searchPer100k", "reportPct", "larceny", "probability"].includes(key);
+      const direction = (currentSort.key === key && currentSort.direction === "asc") ? "desc" : "asc";
+
+      currentSort = { key, direction };
+
+      headers.forEach(h => h.classList.remove("sorted-asc", "sorted-desc"));
+      headers.forEach(h => {
+        if (h.getAttribute("data-sort") === key) {
+          h.classList.add(direction === "asc" ? "sorted-asc" : "sorted-desc");
+        }
+      });
+
+      filteredData.sort((a, b) => {
+        let valA = a[key];
+        let valB = b[key];
+
+        if (!isNumeric) {
+          valA = String(valA).toLowerCase();
+          valB = String(valB).toLowerCase();
+          return direction === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
+        }
+
+        return direction === "asc" ? valA - valB : valB - valA;
+      });
+
+      renderRows(filteredData);
+    }
+
+    function handleSearch() {
+      const query = searchInput.value.trim().toLowerCase();
+
+      filteredData = !query
+        ? [...data]
+        : data.filter(row => row.state.toLowerCase().includes(query));
+
+      // Keep current sort when filtering
+      if (currentSort && currentSort.key) {
+        const { key } = currentSort;
+        const isNumeric = ["rank", "searchPer100k", "reportPct", "larceny", "probability"].includes(key);
+        const direction = currentSort.direction;
+
+        filteredData.sort((a, b) => {
+          let valA = a[key];
+          let valB = b[key];
+
+          if (!isNumeric) {
+            valA = String(valA).toLowerCase();
+            valB = String(valB).toLowerCase();
+            return direction === "asc" ? valA.localeCompare(valB) : valB.localeCompare(valA);
+          }
+
+          return direction === "asc" ? valA - valB : valB - valA;
+        });
+      }
+
+      renderRows(filteredData);
+    }
+
+    headers.forEach(header => {
+      header.addEventListener("click", () => {
+        sortData(header.getAttribute("data-sort"));
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener("input", handleSearch);
+    }
+
+    // Default view: Rank ascending (1–50), without triggering toggle logic
+    filteredData.sort((a, b) => a.rank - b.rank);
+    renderRows(filteredData);
+    document
+      .querySelector('#ppi-table th[data-sort="rank"]')
+      .classList.add("sorted-asc");
+  })();
+</script>
